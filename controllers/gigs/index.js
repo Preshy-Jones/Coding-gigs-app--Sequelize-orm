@@ -19,6 +19,10 @@ module.exports.getAllGigs = async (req, res, next) => {
   }
 };
 
+module.exports.getPaginatedGigs = async (req, res, next) => {
+  res.json(res.paginatedResults);
+};
+
 module.exports.addGig = async function (req, res, next) {
   let { title, technologies, budget, description, contact_email } = req.body;
   let errors = [];
